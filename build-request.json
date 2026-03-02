@@ -1,0 +1,41 @@
+{
+  "kind": "build_request",
+  "title": "Fix broken expense form submission",
+  "projectName": "Expense Manager",
+  "priority": "high",
+  "requirements": [
+    {
+      "id": "REQ-12",
+      "text": "Investigate and fix the Add Expense form submission so that submitting a valid expense (title, price, category, and optional description) successfully calls the backend addExpense function, saves the expense, and resets the form. Ensure error states are surfaced clearly if the call fails.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "I cannot submit the expense"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Filling in all required fields (title, price, category) and clicking submit triggers the addExpense backend call without errors.",
+        "On successful submission, a success message is shown and the form fields are reset to their default empty state.",
+        "If the backend call fails, a clear error message is displayed to the user.",
+        "Client-side validation (non-empty title, positive numeric price, selected category) still works correctly before submission.",
+        "The newly added expense appears in the Dashboard expense list for the correct month after submission."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not change the backend Expense data model or actor interface — only fix the wiring between the form and the existing addExpense function.",
+    "Do not modify any files under frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, or frontend/src/components/ui."
+  ],
+  "nonGoals": [
+    "Adding new expense fields or categories beyond what already exists.",
+    "Changing the visual design of the Add Expense form.",
+    "Any backend schema migrations."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

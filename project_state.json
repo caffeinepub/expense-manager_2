@@ -1,0 +1,162 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 9,
+  "summary": "Professional expense management app with INR currency, monthly expense views, category tagging (movies, gadgets, clothes, etc.), downloadable monthly PDF reports, and an improved modern design.",
+  "architectural_notes": [],
+  "known_issues": [
+    "Expense form submission is broken — users cannot submit a new expense"
+  ],
+  "isFixRequest": true,
+  "existing_features": [
+    {
+      "id": "feature-build-an-add-expense-form-page-where-users-can-input-a-title-description-and-price-for-a-new-expense-the-form-must-validate-that-title-and-price-are-not-empty-and-that-price-is-a-positive-number-on-successful-submission-the-expense-is-saved-to-the-backend-and-the-form-resets",
+      "title": "Build an Add Expense form page where users can input a title, description, and price for a new expense. The form must validate that title and price are not empty and that price is a positive number. On successful submission, the expense is saved to the backend and the form resets.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-dashboard-page-as-the-default-landing-view-the-dashboard-must-display-a-summary-card-section-showing-total-amount-spent-total-number-of-expenses-highest-single-expense-and-lowest-single-expense-below-the-summary-display-a-full-list-of-all-expenses-each-showing-title-description-price-and-date-added-each-expense-entry-must-have-a-delete-button-to-remove-it",
+      "title": "Build a Dashboard page as the default landing view. The dashboard must display: a summary card section showing total amount spent, total number of expenses, highest single expense, and lowest single expense. Below the summary, display a full list of all expenses, each showing title, description, price, and date added. Each expense entry must have a delete button to remove it.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-design-and-apply-a-clean-modern-financial-themed-visual-style-use-a-dark-charcoal-and-crisp-white-palette-with-gold-amber-accent-colors-for-totals-and-key-actions-use-clear-typographic-hierarchy-card-based-layouts-with-subtle-shadows-and-consistent-spacing-throughout-all-pages",
+      "title": "Design and apply a clean, modern financial-themed visual style. Use a dark charcoal and crisp white palette with gold/amber accent colors for totals and key actions. Use clear typographic hierarchy, card-based layouts with subtle shadows, and consistent spacing throughout all pages.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-all-usd-dollar-sign-currency-symbols-with-the-indian-rupee-symbol-throughout-the-entire-application-in-summary-cards-expense-list-items-form-labels-and-any-formatted-price-values",
+      "title": "Replace all USD dollar sign ($) currency symbols with the Indian Rupee symbol (₹) throughout the entire application — in summary cards, expense list items, form labels, and any formatted price values.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-add-expense-form-to-include-a-required-category-dropdown-field-with-options-movies-gadgets-clothes-food-travel-health-education-other-the-selected-category-must-be-submitted-with-the-expense-to-the-backend",
+      "title": "Update the Add Expense form to include a required Category dropdown field with options: Movies, Gadgets, Clothes, Food, Travel, Health, Education, Other. The selected category must be submitted with the expense to the backend.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-flat-all-expenses-list-on-the-dashboard-with-a-monthly-browsing-view-display-a-month-year-selector-e-g-previous-next-month-navigation-arrows-with-the-current-month-label-show-only-expenses-belonging-to-the-selected-month-the-summary-stats-total-count-highest-lowest-must-also-reflect-only-the-selected-month-s-expenses",
+      "title": "Replace the flat all-expenses list on the Dashboard with a monthly browsing view. Display a month/year selector (e.g., previous/next month navigation arrows with the current month label). Show only expenses belonging to the selected month. The summary stats (total, count, highest, lowest) must also reflect only the selected month's expenses.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-download-pdf-report-button-on-the-dashboard-that-generates-and-downloads-a-pdf-for-the-currently-selected-month-the-pdf-must-include-the-month-year-title-summary-stats-total-spent-number-of-expenses-highest-lowest-and-an-itemized-table-of-all-expenses-in-that-month-columns-title-category-description-date-amount-in-use-a-client-side-pdf-generation-library-such-as-jspdf-with-jspdf-autotable-no-backend-changes-required",
+      "title": "Add a 'Download PDF Report' button on the Dashboard that generates and downloads a PDF for the currently selected month. The PDF must include: the month/year title, summary stats (total spent, number of expenses, highest, lowest), and an itemized table of all expenses in that month (columns: title, category, description, date, amount in ₹). Use a client-side PDF generation library (such as jsPDF with jspdf-autotable) — no backend changes required.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-overhaul-the-visual-design-to-be-more-professional-and-polished-apply-a-refined-dark-charcoal-sidebar-navigation-layout-with-the-app-logo-name-replacing-the-top-sticky-header-use-deep-navy-charcoal-backgrounds-with-crisp-white-cards-that-have-subtle-depth-shadows-use-gold-amber-as-the-primary-accent-for-ctas-active-nav-states-and-key-metric-values-add-a-category-badge-chip-on-each-expense-card-using-distinct-muted-colors-per-category-display-a-small-bar-or-pie-chart-on-the-dashboard-summarizing-spending-by-category-for-the-selected-month-improve-typography-hierarchy-spacing-and-micro-interaction-states-hover-focus-loading-skeletons",
+      "title": "Overhaul the visual design to be more professional and polished. Apply a refined dark charcoal sidebar navigation layout with the app logo/name, replacing the top sticky header. Use deep navy/charcoal backgrounds with crisp white cards that have subtle depth shadows. Use gold/amber as the primary accent for CTAs, active nav states, and key metric values. Add a category badge/chip on each expense card using distinct muted colors per category. Display a small bar or pie chart on the Dashboard summarizing spending by category for the selected month. Improve typography hierarchy, spacing, and micro-interaction states (hover, focus, loading skeletons).",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-dedicated-home-landing-page-accessible-at-the-route-moving-the-dashboard-to-dashboard-the-home-page-should-serve-as-a-welcoming-entry-point-to-the-app-showcasing-the-app-name-and-tagline-a-brief-description-of-key-features-track-expenses-monthly-reports-category-tagging-pdf-downloads-and-a-prominent-call-to-action-button-that-navigates-to-the-dashboard-the-design-must-follow-the-existing-dark-charcoal-and-gold-amber-visual-theme-established-in-the-rest-of-the-app",
+      "title": "Create a dedicated Home/Landing page accessible at the '/' route (moving the Dashboard to '/dashboard'). The Home page should serve as a welcoming entry point to the app, showcasing the app name and tagline, a brief description of key features (track expenses, monthly reports, category tagging, PDF downloads), and a prominent call-to-action button that navigates to the Dashboard. The design must follow the existing dark charcoal and gold/amber visual theme established in the rest of the app.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-investigate-and-fix-the-add-expense-form-submission-so-that-submitting-a-valid-expense-title-price-category-and-optional-description-successfully-calls-the-backend-addexpense-function-saves-the-expense-and-resets-the-form-ensure-error-states-are-surfaced-clearly-if-the-call-fails",
+      "title": "Investigate and fix the Add Expense form submission so that submitting a valid expense (title, price, category, and optional description) successfully calls the backend addExpense function, saves the expense, and resets the form. Ensure error states are surfaced clearly if the call fails.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Add expenses with price, title, and description",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Dashboard to track expenses and view summary",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Create a backend data model and actor for managing expenses. Each expense must have: a unique ID, title (Text), description (Text), price (Float), and a creation timestamp. Implement the following functions: addExpense, getExpenses, deleteExpense, and a getSummary function that returns total spending, count of expenses, and the highest/lowest single expense amount.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Replace USD dollar signs with INR rupee (₹) currency throughout the app",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Add expense categories (e.g., Movies, Gadgets, Clothes, Food, etc.) so users can tag each expense with a category when adding it",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Add monthly view for expenses — instead of showing all expenses at once, let users browse and filter expenses by month/year",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Add a feature to download a monthly expense report as a PDF, including summary stats and itemized expense list for the selected month",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Improve the overall UI/UX design to look more professional and polished",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Update the backend Expense data model to include a 'category' field (Text). Update addExpense to accept a category parameter. Update getExpenses and getSummary to return category data. Predefined categories must include: Movies, Gadgets, Clothes, Food, Travel, Health, Education, and Other.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-11",
+      "summary": "Create a home/landing page for the app",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Expense Manager",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

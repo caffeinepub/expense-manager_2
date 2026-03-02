@@ -1,0 +1,20 @@
+{
+  "backend/main.mo": "Main Motoko actor implementing an expense tracker with CRUD operations for expenses and user profiles, enforcing role-based access control via AccessControl and MixinAuthorization modules.",
+  "feature_evidence.json": "Feature evidence report linking the Add Expense form submission fix (backend call, form reset, error surfacing) to its relevant source files, components, and test IDs.",
+  "frontend-file-summaries.txt": "JSON document containing one-sentence summaries of each frontend source file, serving as a reference for build planning and code navigation.",
+  "frontend/index.css": "Tailwind base CSS file defining OKLCH-based CSS custom properties for light and dark themes, covering background, foreground, sidebar, chart, and semantic color tokens.",
+  "frontend/index.html": "Minimal HTML entry point for the Expense Manager app that mounts the React app into a root div and loads the Vite/TypeScript module entry point.",
+  "frontend/src/App.tsx": "Sets up TanStack Router with three routes (Home at '/', Dashboard at '/dashboard', Add Expense at '/add-expense') wrapped in a QueryClientProvider with a shared Layout.",
+  "frontend/src/components/Layout.tsx": "Sidebar/header layout component providing navigation, Internet Identity login/logout, a profile setup modal for first-time users, and an outlet for child routes.",
+  "frontend/src/hooks/useActor.ts": "React Query hook that creates and caches an authenticated or anonymous ICP actor, reinitializing it when the Internet Identity changes and invalidating dependent queries accordingly.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides an InternetIdentityProvider and useInternetIdentity hook for managing Internet Identity authentication state, login, logout, and identity persistence via AuthClient.",
+  "frontend/src/hooks/useQueries.ts": "Defines React Query hooks for fetching and mutating expense data, user profiles, and summaries via an ICP actor, including get/add/delete expense and user profile operations.",
+  "frontend/src/index.css": "Global stylesheet that imports fonts, sets up Tailwind, and defines CSS custom properties for light/dark themes including color tokens for categories, sidebar, and gold/charcoal palette.",
+  "frontend/src/main.tsx": "Application entry point that mounts the React app with QueryClientProvider and InternetIdentityProvider wrappers.",
+  "frontend/src/pages/AddExpense.tsx": "Form page for adding a new expense with title, price, description, and category fields; shows a login prompt if the user is unauthenticated and validates input before submitting via the useAddExpense mutation.",
+  "frontend/src/pages/Dashboard.tsx": "Dashboard page that displays paginated monthly expenses with stat cards, a category bar chart, and per-expense delete functionality, using data from useGetExpenses.",
+  "frontend/src/pages/Home.tsx": "Landing/home page that renders a hero section with app branding and a feature grid highlighting key capabilities like monthly views, category tagging, and PDF reports.",
+  "frontend/src/utils/urlParams.ts": "Utility module providing functions to read, store, retrieve, and clear URL parameters from both query strings and hash-based routes, with optional sessionStorage persistence.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration defining dark mode, custom color tokens (mapped to CSS variables for themes, categories, sidebar), custom fonts (Inter, Sora), border radii, box shadows, and keyframe animations.",
+  "project_state.json": "Tracks project state version 9 for a professional INR expense management app, listing existing features, a known broken expense form submission issue flagged as a fix request."
+}

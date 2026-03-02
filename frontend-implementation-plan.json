@@ -1,0 +1,30 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Fix broken expense form submission",
+  "requirements": [
+    {
+      "id": "REQ-12",
+      "summary": "Fix the Add Expense form submission to successfully call the backend addExpense function, save the expense, reset the form, and surface error states clearly",
+      "acceptanceCriteria": [
+        "Filling in all required fields (title, price, category) and clicking submit triggers the addExpense backend call without errors.",
+        "On successful submission, a success message is shown and the form fields are reset to their default empty state.",
+        "If the backend call fails, a clear error message is displayed to the user.",
+        "Client-side validation (non-empty title, positive numeric price, selected category) still works correctly before submission.",
+        "The newly added expense appears in the Dashboard expense list for the correct month after submission."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/AddExpense.tsx",
+          "operation": "modify",
+          "description": "Fix the form submission handler to properly call the addExpense mutation from useQueries.ts with the correct parameter order (title, description, price, category) matching the backend interface. Ensure the form reset logic is called after successful submission and that error states from the mutation are displayed to the user. Verify that client-side validation for non-empty title, positive numeric price, and selected category remains in place before submission."
+        },
+        {
+          "path": "frontend/src/hooks/useQueries.ts",
+          "operation": "modify",
+          "description": "Review and fix the addExpense mutation hook to ensure it correctly calls actor.addExpense with parameters in the exact order defined in the backend interface (title: string, description: string, price: number, category: string). Verify that the mutation properly invalidates the expenses and summary query caches on success so that the Dashboard reflects the newly added expense immediately."
+        }
+      ]
+    }
+  ]
+}

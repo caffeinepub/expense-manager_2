@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: oklch(0.97 0.005 240);
+    --foreground: oklch(0.18 0.02 240);
+
+    --card: oklch(1 0 0);
+    --card-foreground: oklch(0.18 0.02 240);
+
+    --popover: oklch(1 0 0);
+    --popover-foreground: oklch(0.18 0.02 240);
+
+    --primary: oklch(0.72 0.15 65);
+    --primary-foreground: oklch(0.15 0.02 240);
+
+    --secondary: oklch(0.93 0.01 240);
+    --secondary-foreground: oklch(0.25 0.02 240);
+
+    --muted: oklch(0.93 0.01 240);
+    --muted-foreground: oklch(0.52 0.02 240);
+
+    --accent: oklch(0.72 0.15 65);
+    --accent-foreground: oklch(0.15 0.02 240);
+
+    --destructive: oklch(0.55 0.22 25);
+    --destructive-foreground: oklch(0.98 0 0);
+
+    --border: oklch(0.88 0.01 240);
+    --input: oklch(0.88 0.01 240);
+    --ring: oklch(0.72 0.15 65);
+
+    --success: oklch(0.62 0.17 145);
+    --success-foreground: oklch(0.98 0 0);
+
+    --warning: oklch(0.78 0.16 75);
+    --warning-foreground: oklch(0.15 0.02 240);
+
+    --sidebar-bg: oklch(0.16 0.025 255);
+    --sidebar-fg: oklch(0.88 0.01 240);
+    --sidebar-muted: oklch(0.55 0.02 255);
+    --sidebar-border: oklch(0.22 0.025 255);
+    --sidebar-active: oklch(0.72 0.15 65);
+    --sidebar-active-bg: oklch(0.22 0.04 65);
+
+    --gold: oklch(0.72 0.15 65);
+    --gold-light: oklch(0.82 0.12 65);
+    --gold-dark: oklch(0.58 0.16 65);
+
+    --charcoal: oklch(0.16 0.025 255);
+    --charcoal-light: oklch(0.22 0.025 255);
+    --charcoal-lighter: oklch(0.28 0.02 255);
+
+    --cat-movies: oklch(0.62 0.18 290);
+    --cat-gadgets: oklch(0.58 0.18 220);
+    --cat-clothes: oklch(0.65 0.18 340);
+    --cat-food: oklch(0.68 0.18 50);
+    --cat-travel: oklch(0.60 0.18 175);
+    --cat-health: oklch(0.62 0.18 145);
+    --cat-education: oklch(0.62 0.18 255);
+    --cat-other: oklch(0.58 0.05 240);
+
+    --radius: 0.625rem;
+  }
+
+  .dark {
+    --background: oklch(0.13 0.02 255);
+    --foreground: oklch(0.92 0.01 240);
+
+    --card: oklch(0.18 0.025 255);
+    --card-foreground: oklch(0.92 0.01 240);
+
+    --popover: oklch(0.18 0.025 255);
+    --popover-foreground: oklch(0.92 0.01 240);
+
+    --primary: oklch(0.72 0.15 65);
+    --primary-foreground: oklch(0.12 0.02 240);
+
+    --secondary: oklch(0.22 0.025 255);
+    --secondary-foreground: oklch(0.88 0.01 240);
+
+    --muted: oklch(0.22 0.025 255);
+    --muted-foreground: oklch(0.58 0.02 240);
+
+    --accent: oklch(0.72 0.15 65);
+    --accent-foreground: oklch(0.12 0.02 240);
+
+    --destructive: oklch(0.55 0.22 25);
+    --destructive-foreground: oklch(0.98 0 0);
+
+    --border: oklch(0.25 0.025 255);
+    --input: oklch(0.25 0.025 255);
+    --ring: oklch(0.72 0.15 65);
+
+    --success: oklch(0.62 0.17 145);
+    --success-foreground: oklch(0.98 0 0);
+
+    --warning: oklch(0.78 0.16 75);
+    --warning-foreground: oklch(0.15 0.02 240);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Sora', sans-serif;
+  }
+}
+
+@layer utilities {
+  .sidebar-bg {
+    background-color: var(--sidebar-bg);
+  }
+  .sidebar-fg {
+    color: var(--sidebar-fg);
+  }
+  .sidebar-border {
+    border-color: var(--sidebar-border);
+  }
+  .text-gold {
+    color: var(--gold);
+  }
+  .bg-gold {
+    background-color: var(--gold);
+  }
+  .bg-charcoal {
+    background-color: var(--charcoal);
+  }
+  .bg-charcoal-light {
+    background-color: var(--charcoal-light);
+  }
+  .bg-charcoal-lighter {
+    background-color: var(--charcoal-lighter);
+  }
+  .card-shadow {
+    box-shadow: 0 1px 3px oklch(0 0 0 / 0.08), 0 4px 16px oklch(0 0 0 / 0.06);
+  }
+  .card-shadow-lg {
+    box-shadow: 0 4px 6px oklch(0 0 0 / 0.07), 0 10px 30px oklch(0 0 0 / 0.1);
+  }
+  .rupee::before {
+    content: '₹';
+  }
+}
+
+/* Print styles for PDF report */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+  }
+}
